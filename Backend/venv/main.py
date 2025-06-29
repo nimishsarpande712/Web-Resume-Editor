@@ -17,7 +17,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://web-resume-editor.onrender.com"
+        "https://web-resume-editor.vercel.app"
     ],
     allow_methods=["*"],
     allow_headers=["*"],

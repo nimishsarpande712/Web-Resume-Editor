@@ -6,6 +6,25 @@ This repository contains a web-based Resume Editor application with two main par
 - **Frontend**: A React application (`Frontend/resume-editor`) that allows users to upload, edit, enhance, save, and download resumes.
 
 ---
+Deployed project : https://web-resume-editor.vercel.app/
+Can directly viwe on this 
+
+For localhost viweing change the configuration of   Main.py
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",  # For local React dev
+        "https://web-resume-editor.vercel.app"  # For deployed frontend
+    ],
+    allow_methods=["*"],
+    allow_headers=["*"],
+    allow_credentials=True,
+)
+of API.js 
+const BASE_URL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:8000"
+    : "https://web-resume-editor.onrender.com";
 
 ## Project Structure
 

@@ -15,13 +15,17 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://web-resume-editor.vercel.app"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://web-resume-editor.onrender.com"
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=True,
 )
 
-# Create a data directory if it doesn't exist
+
+
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
 

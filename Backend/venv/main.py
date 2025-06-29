@@ -15,7 +15,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://web-resume-editor.vercel.app/"],
+    allow_origins=["https://web-resume-editor.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=True,

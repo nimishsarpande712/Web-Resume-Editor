@@ -15,7 +15,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["https://web-resume-editor.onrender.com/"],
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=True,

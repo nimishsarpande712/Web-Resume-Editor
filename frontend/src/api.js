@@ -1,4 +1,8 @@
-const API_URL = "https://web-resume-editor.onrender.com";
+const API_URL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:8000"
+    : "https://web-resume-editor.onrender.com";
+
 
 export async function aiEnhance(section, content) {
     const response = await fetch(`${API_URL}/ai-enhance`, {
